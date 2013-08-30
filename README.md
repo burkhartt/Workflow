@@ -2,6 +2,7 @@ Workflow
 ========
 <p>Example usage:</p>
 <p>
+````c#
 var workflowSetup = new WorkflowSetup<Configuration>();<br />
 var workflow = workflowSetup.Do(x => x.SendOrderToWarehouse())<br />
                             .Then(x => x.WaitForOrderToBeShipped())<br />
@@ -9,4 +10,5 @@ var workflow = workflowSetup.Do(x => x.SendOrderToWarehouse())<br />
                             .Then(x => x.MarkOrderAsFulfilled())<br />
                             .Compile();<br />
 workflow.Process();
+````
 </p>
